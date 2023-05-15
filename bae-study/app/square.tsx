@@ -1,21 +1,30 @@
-export default function Board() {
+"use client";
+
+import { useState } from "react"
+
+export default function Square({value, onSquareClick}){
+  /*const [value, setValue] = useState(null);
+
+  function handleClick() {
+    setValue('X');
+  }
+
+  
+  return (
+    <button
+      className="square"
+      onClick={handleClick}
+    >
+      {value}
+    </button>*
+
+   
+  )*/
+    //return <button className="square">{value}</button>;
     return (
-    <>
-      <div className="board-row">
-        <button className="square">1</button>
-        <button className="square">2</button>
-        <button className="square">3</button>
-      </div>
-      <div className="board-row">
-        <button className="square">4</button>
-        <button className="square">5</button>
-        <button className="square">6</button>
-      </div>
-      <div className="board-row">
-        <button className="square">7</button>
-        <button className="square">8</button>
-        <button className="square">9</button>
-      </div>
-    </>
+      <button className="square" onClick={onSquareClick}>
+        {value}
+      </button>
     );
-} 
+    
+}
